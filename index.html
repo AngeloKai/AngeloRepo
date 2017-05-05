@@ -253,12 +253,12 @@ pre.idl.highlight { color: #708090; }
    <header>
     <p data-fill-with="logo"><a href="https://www.w3.org/"><img alt="W3C" height="48" src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C" width="72"></a> </p>
     <h1 class="p-name no-ref" id="title">Web Authentication: An API for accessing Public Key Credentials </h1>
-    <h2 class="no-num no-toc no-ref heading settled" id="subtitle"><span class="content">W3C Working Draft, <time class="dt-updated" datetime="2017-05-04">4 May 2017</time></span></h2>
+    <h2 class="no-num no-toc no-ref heading settled" id="subtitle"><span class="content">W3C Working Draft, <time class="dt-updated" datetime="2017-05-05">5 May 2017</time></span></h2>
    </header>
    <div data-fill-with="spec-metadata">
     <dl>
      <dt>This version:
-     <dd><a class="u-url" href="https://www.w3.org/TR/2017/WD-webauthn-20170504/">https://www.w3.org/TR/2017/WD-webauthn-20170504/</a>
+     <dd><a class="u-url" href="https://www.w3.org/TR/2017/WD-webauthn-20170505/">https://www.w3.org/TR/2017/WD-webauthn-20170505/</a>
      <dt>Latest published version:
      <dd><a href="https://www.w3.org/TR/webauthn/">https://www.w3.org/TR/webauthn/</a>
      <dt>Editor's Draft:
@@ -301,10 +301,7 @@ WebAuthn conformant authenticators, including their signature and attestation fu
   </div>
   <h2 class="no-num no-toc no-ref heading settled" id="status"><span class="content">Status of this document</span></h2>
   <div data-fill-with="status">
-   <p><em>This section describes the status of this document at the time of its publication. Other
-    documents may supersede this document. A list of current <abbr title="World Wide Web Consortium">W3C</abbr> publications and the latest revision of this
-    technical report can be found in the <a href="https://www.w3.org/TR/"><abbr title="World Wide Web Consortium">W3C</abbr> technical
-    reports index</a> at http://www.w3.org/TR/.</em></p>
+   <p><em>This section describes the status of this document at the time of its publication. Other documents may supersede this document. A list of current W3C publications and the latest revision of this technical report can be found in the <a href="https://www.w3.org/TR/">W3C technical reports index</a> at https://www.w3.org/TR/.</em></p>
    <p> This document was published by the <a href="https://www.w3.org/webauthn/">Web Authentication Working Group</a> as a Working Draft. This document is intended to become a W3C Recommendation.
 
     Feedback and comments on this specification are welcome. Please use <a href="https://github.com/w3c/webauthn/issues">Github issues</a>.
@@ -1727,7 +1724,7 @@ If not, return an error code equivalent to NotSupportedError and terminate the o
 so, return an error code equivalent to NotAllowedError and terminate the operation.</p>
     <li data-md="">
      <p>If the <var>requireResidentKey</var> flag is set to <var>true</var> and the authenticator cannot store a <a data-link-type="dfn" href="#client-side-resident-credential-private-key" id="ref-for-client-side-resident-credential-private-key-6">Client-side-resident Credential
-Private Key</a>, return an error code equivalent to QuotaExceededError and terminate the operation.</p>
+Private Key</a>, return an error code equivalent to ConstraintError and terminate the operation.</p>
     <li data-md="">
      <p>Prompt the user for consent to create a new credential. The prompt for obtaining this consent is shown by the authenticator
 if it has its own output capability, or by the user agent otherwise. If the user denies consent, return an error code
